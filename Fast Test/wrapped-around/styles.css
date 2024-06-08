@@ -1,0 +1,23 @@
+.box 
+{
+    width: 400px;
+}
+
+.shape 
+{
+    padding: 20px;
+    margin: 5px;
+    border: 10px ridge lightcoral;
+    border-radius: 50%;
+    float: right;
+    shape-outside: margin-box;
+    background-color: aquamarine;
+}
+
+.red {
+    background-color: crimson;
+}
+
+.green {
+    background-color: blue;
+}
