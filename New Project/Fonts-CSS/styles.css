@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "Heebo";
+    src: url("./fonts/Heebo-woff2/Heebo-Regular.woff2") format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+section > p {
+    font-size: xx-large;
+    font-family: 'Inter';/* ЧТОБЫ ВЫБРАТЬ СЕМЕЙСТВО ШРИФТА*/
+}
+
+section > h2 {
+    font-family: 'Heebo';
+}
