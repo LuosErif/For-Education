@@ -26,5 +26,17 @@ section > h2 {
 }
 
 body {
-    font: 400 normal normal 16px/1.5 Montserrat, sans-serif;
+    font: 400 italic normal normal 16px/1.5 Montserrat, sans-serif;/* ОБОБЩЁННОЕ СВОЙСТВО ДЛЯ ПАРАМЕТРОВ ШРИФТА*/
+
+
+    /*
+        Если указывать по порядку:
+        font-weight: 400; толщина текста
+        font-style: italic; норма или курсив
+        font-stretch: normal;
+        font-variant: normal;
+        font-size: 16px; размер шрифта
+        line-height: 1.5; межстрочный интервал
+        font-family: Montserrat, sans-serif; семейство шривта, если имя состоит из нескольких слов, то в кавычки
+    */
 }
