@@ -72,4 +72,43 @@ body {
 
 /*START HERE        START HERE          START HERE          START HERE          START HERE*/
 
+h1{
+    color: goldenrod;
+}
 
+[class="word-colored"] {
+    color: red; /* pick a color using special words*/
+}
+
+[class="rgb-colored"] {
+    color: rgb(0 255 0);
+}
+
+[class="rgb-alpha-colored"] {
+    color: rgb(255 0 255 / 0.5); /* 0-255 ; / 0 - invisible, 1 - fully visible*/
+}
+
+[class="hex-colored"] {
+    color: #6c3b4b;
+}
+
+[class="hex-colored-half-alpha"] {
+    color: #2fc84980; /*added 4th quartet and 80 = 50% visibility*/
+}
+
+[class="hsl-colored"] {
+    color: hsl(180 90% 50%);
+}
+
+[class="hsl-alpha-colored"] {
+    color: hsl(267 90% 50% / 0.75);
+}
+
+.transparent-color {
+    color: transparent;
+}
+
+[class="colored-border-like-text"] {
+    color: hsl(90 95% 50% / 0.9);
+    border: 3px solid currentColor;
+}
