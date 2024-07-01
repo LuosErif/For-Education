@@ -69,14 +69,26 @@ body {
     }
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat\ woff2/") format(woff2);
+}
+
 
 
 /*START FROM HERE       START FROM HERE         START FROM HERE         START FROM HERE*/
 
+main {
+    padding-left: 40%;
+    box-sizing: border-box;
+}
+
 
 main > [class="test"]{
-    background: lightcoral url("./images/coffee.jpg") no-repeat 0 0/300px fixed padding-box;
+    background: lightcoral url("./images/coffee.jpg") no-repeat center/300px local padding-box;
     height: 250px;
+    display: block;
+    width: 300px;
 
     /*
             background-color: lightcoral;
@@ -87,4 +99,31 @@ main > [class="test"]{
             background-attachment: fixed;
             background-clip: padding-box;
     */
+}
+
+main > [class="test"] > [class="hey"]{
+    margin: 0;
+    position: relative;
+}
+
+main > [class="box-1"] {
+    width: 500px;
+    height: 500px;
+    font: 400 italic normal normal 16px/1.5 Montserrat, sans-serif;
+    background-image: url("./images/island.jpg");
+}
+
+[class="box-1"] > pre {
+    margin: 0;
+    
+}
+
+main > [class="box-2"] {
+        height: 500px;
+        width: 500px;
+        background-color: hsl(102 100 50 / 0.1);
+}
+
+[class="hao"]{
+    color: hsl(180 100 50);
 }
