@@ -1,16 +1,40 @@
-// Simple way to create a variable
-let variable; // semicolons are used to end a line of code manually
-variable = 12;
-// Faster way to create a variable
-let message = 'I am a message'; // <-- to put a string data use single '' symbols
-//var - a variable declarated by var can be used in code before the line it was declared on
-console.log(vared);
-var vared = Number(42);
-console.log(vared);
+//'use strict'    Плпробуй убрать комментарий :) Чтобы компилятор бил по рукам за ошибки
+//console.log(variable); Если вызвать переменную до её создания то будет ошибка!
+// Объявление переменной (Инициализация переменной)
+let variable;// С помошью ключевого слова let можно позднее переопределить значение переменной
+variable=12;
+// Простое и быстрое объявление переменной
+let message='I am a message';
+console.log(message);
 
-function gonnaTry() {
-    console.log(vared);
-    var vared = Number(42);
-    console.log(vared);
-}
-gonnaTry();
+message = 'I am a bigger message now!';
+console.log(message);
+
+console.log(undef); // используя объявление переменно через var можно вызвать переменную до её создания, однако её значение будет undefined
+var undef = 'Haha';
+console.log(undef);
+
+const iAmConst = 'tryMe!';//Если использовать const при лбъявлении переменной, то её нельзя будет переопределить!
+//iAmConst = 12;
+console.log(iAmConst);
+
+// В итоге имеем 3 различных способа объявления переменной - let, const, var (в порядке убывания популярности)
+
+const assign1 = 12, assign2 = 'iamString', noBitches = true; // так тоже можно объявлять переменные!
+const 
+highr = 'Jaa',
+middl = 'iAm',
+lowr = 'daym';
+//И так тоже можно!! :)
+
+const ffy = 'Admeen';
+const admin = ffy;
+console.log(admin);
+
+//Однако можно создать переменную без объявления, но так делать не следует!:
+notgood = 'butWorks!';//По новым правилам сначала нужно объявить тип переменной а затем присвоить ей значение
+console.log(notgood);//Не следует пользоваться таким способом объявления переменных из-за  нелогичности
+
+//Ключевые слова - зарезервированне слова, которые нельзя использовать для создания переменных!!
+
+//Объявлять переменные можно даже с символов юникода, без учёта регистра, со знаками например $ или _.. и добавлять цифры к имени переменной
