@@ -208,6 +208,8 @@ function positiveSum(arr) {
 }
 
 let posi = [];
+let anti = [-1, -2, -3, -5, 2];
+let doubled = [1, -3, 17, 6, 3, -2 , 4, -7];
 console.log(positiveSum(posi));
 
 function positiveSummy(arr) {
@@ -215,3 +217,7 @@ function positiveSummy(arr) {
 }
 
 console.log(positiveSummy(posi));
+//Улучшенная и гораздо более крутая версия функции выше:
+console.log(posi.reduce((a, b) => a + (b < 0 ? b : 0),0));
+console.log(anti.reduce((a, b) => a + (b < 0 ? 0 : b),1));
+console.log(doubled.reduce((a, b) => a + (b > 10 || b < -3 ? 0 : b),0));//9 тк в случае с -3 : -3 < -3 ? -> false. И включит в счёт
