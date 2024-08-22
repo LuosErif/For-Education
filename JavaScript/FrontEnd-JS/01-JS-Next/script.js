@@ -301,4 +301,4 @@ function sum(x, y, z) {
   // Expected output: 6
   
   console.log(sum.apply(null, numbers));
-  console.log(sum.app)
+//Читы: undefined > 2    - выведет false
