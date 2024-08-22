@@ -221,3 +221,84 @@ console.log(positiveSummy(posi));
 console.log(posi.reduce((a, b) => a + (b < 0 ? b : 0),0));
 console.log(anti.reduce((a, b) => a + (b < 0 ? 0 : b),1));
 console.log(doubled.reduce((a, b) => a + (b > 10 || b < -3 ? 0 : b),0));//9 тк в случае с -3 : -3 < -3 ? -> false. И включит в счёт
+
+
+const classPoints = [2,6,5];
+const yourPoints = 4;
+function betterThanAverage(classPoints, yourPoints) {
+    let better = true;
+    let avg = 0;
+    let sum = 0;
+    for (let i = 0; i < classPoints.length; i++){
+        //console.log(sum); Это первая строка цикла. sum действительно равно 0
+        sum += classPoints[i];
+        //console.log(sum); Эта строка следует после выполнения операции сложения элемента массива с текущим значением суммы.
+    }
+    avg = sum / classPoints.length;
+    console.log(avg);
+    if (yourPoints < avg ) {
+        return !better;
+    } else {
+        return better;
+    }
+}
+console.log(betterThanAverage(classPoints, yourPoints));
+
+
+const arrY = [1,2,3,4,5];
+
+function callMe(arr) {
+    let solution = [];
+    let min = undefined;
+    let max = undefined;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > min) {
+            min += 0;
+        } else {
+            min = arr[i];
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] < max) {
+            max += 0;
+        } else {           
+            max = arr[i];
+        }
+    }
+    solution.push(min);
+    solution.push(max);
+    return solution
+}
+
+callMe(arrY);
+
+//if(arr[i]>max) max = arr[i];КОРОТКАЯ КОНСТРУКЦИЯ если от инструкции интересно только true
+
+function minMax(arr){
+    return arr.reduce(function(p, e){
+      return [p[0] < e ? p[0] : e, p[1] > e ? p[1] : e];//ПРОИЗВЕДЕНИЕ ИСКУССТВА, по совместительству CAUPEDAH!
+    },[arr[0], arr[0]]);
+}
+console.log(minMax(arrY));
+
+
+//НЕМНОГО Math:
+//Math.abs(число) - покажет абсолютное значение числа (без знаков + или -)
+//Math.pow(число, степень) - вернёт число возведённое в степень
+//Math.hypot(число,число,...,число) - вернёт квадратный корень суммы квадратов всех введённых чисел!! Оч удобно
+//Math.sign(число) - Вернёт -1 если число отрицательное, 0 если 0, 1 если число положительное
+//
+
+
+function sum(x, y, z) {
+    return x + y + z;
+  }
+  
+  const numbers = [1, 2, 3];
+  
+  console.log(sum(...numbers));
+  // Expected output: 6
+  
+  console.log(sum.apply(null, numbers));
+  console.log(sum.app)
