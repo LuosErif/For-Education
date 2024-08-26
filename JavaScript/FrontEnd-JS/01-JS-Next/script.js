@@ -1,4 +1,4 @@
-//'use strict'    Плпробуй убрать комментарий :) Чтобы компилятор бил по рукам за ошибки
+//'use strict'    //Плпробуй убрать комментарий :) Чтобы компилятор бил по рукам за ошибки
 //console.log(variable); Если вызвать переменную до её создания то будет ошибка!
 // Урок 1: Объявление переменной (Инициализация переменной)
 let variable;// С помошью ключевого слова let можно позднее переопределить значение переменной
@@ -179,7 +179,7 @@ console.log(
 )
 
 console.log(
-    typeof ('12' / '3') //Number, тоже неявное преобразование строк в нечто исчисляемое
+    typeof ('12' / '3') //Number, тоже неявное преобразование строк в нечто исчисляемое. Сначала происходит преобразование строки 12 в число, затем строки 3 в число, затем происходит математическая операция.
 );//Однако лучше всегда прибегать к явному преобразованию типов
 
 const Chiclo = 2;
@@ -190,6 +190,35 @@ const booly = true;
 console.log(booly);
 console.log(String(booly));
 
+const k = '123';
+function strToNumber(str) {//Явное преобразование строки в число
+    return Number(str);
+}
+
+console.log(strToNumber(k));
+const bo = true;
+const ob = `haha! i'm not a boolean haha!!`
+function boolToNumber(bool) {
+    return typeof bool == "boolean" ? Number(bool) : `${bool} is not a boolean type`;//Явное преобразование булева значения в число
+}
+
+console.log(boolToNumber(bo));
+console.log(boolToNumber(ob));
+
+console.log(Boolean(-1));
+console.log(Boolean(0));//Таким образом 0 выдаст false, а любое другое число вернёт true
+console.log(Boolean(1));
+console.log(Boolean(2));
+
+console.log(Boolean(''));//Проверка строки - если пустая, то false
+console.log(Boolean('I am truuue!'));
+
+//Следующие значения преобразуются в false:
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
 
 
 
@@ -302,3 +331,7 @@ function sum(x, y, z) {
   
   console.log(sum.apply(null, numbers));
 //Читы: undefined > 2    - выведет false
+
+let l = '12';
+let o = 2;
+console.log(Number(l) + 0);
