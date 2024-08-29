@@ -352,3 +352,21 @@ console.log(solution2(typeof nool));
 
 const ref = str => str.split('').reverse().join('');//Использование стрелочной функции значительно уменьшает количество символов. Очень лаконично
 console.log(ref(bosuya));
+const solution3 = s => [...s].reverse().join('')//Я не перестаю удивляться...
+console.log(solution3(bosuya));
+/*Вообще, стоило помнить о конкатенации строк и использовать элементы массива правильно!!
+function solution(s){
+  var o = '';
+  for (var i = s.length - 1; i >= 0; i--)
+    o += s[i];
+  return o;
+}
+*/
+
+function solutionFace(s){ //Простое решение в лоб
+    var o = '';//Создаём пустую строку
+    for (var i = s.length - 1; i >= 0; i--)//Проходимся по массиву с конца
+      o += s[i];//Используем конкатенацию строк для добавления каждого элемента массива
+    return o;//возвращаем результат
+}
+console.log(solutionFace(bosuya));
