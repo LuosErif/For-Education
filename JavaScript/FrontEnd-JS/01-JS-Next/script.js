@@ -335,3 +335,20 @@ function sum(x, y, z) {
 let l = '12';
 let o = 2;
 console.log(Number(l) + 0);
+
+const bosuya = 'Boosya';//Чтобы разбить слово на символы 
+const letters = bosuya.split(''); // можно указать пустую строку, тогда мы получим массив символов
+console.log(letters);
+console.log(letters.reverse());// Изменяем порядок элементов массива на обратный
+console.log(letters.reverse().join(''));//Склеиваем массив в строку, готовую к выводу
+
+function solution2(str){
+    return  str.split('').reverse().join('');//Данная функция принимает строку, разбивает её поэлементно в массив, расставляет элементы в обратном порядке, склеивает полученный массив в строку и возвращает результат.  
+}
+
+console.log(solution2(bosuya));
+const nool = '';
+console.log(solution2(typeof nool));
+
+const ref = str => str.split('').reverse().join('');//Использование стрелочной функции значительно уменьшает количество символов. Очень лаконично
+console.log(ref(bosuya));
