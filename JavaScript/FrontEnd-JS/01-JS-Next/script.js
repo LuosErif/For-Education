@@ -370,3 +370,19 @@ function solutionFace(s){ //Простое решение в лоб
     return o;//возвращаем результат
 }
 console.log(solutionFace(bosuya));
+
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++){
+      z.push(x * i);
+    }
+    return z;
+}
+console.log(countBy(1,10));
+//const countBy = (x, n) => Array.from({length: n}, (v, k) => (k + 1) * x)  Вот пример хорошего функционального программирования(кода)
+//Так как очевидно что необходимо создать новый массив, следует пользоваться Array.from тк данный вариант ->
+//автоматически создаёт массив, проходясь поэлементно с 0-ого элемента до n, где v - текущий элемент, k это инкримент( v[0] = (0 + 1) * x)
+
+/*
+const countBy = (x, n) => [...Array(n)].map((_, idx) => ++idx * x);//
+*/
