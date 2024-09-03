@@ -371,7 +371,7 @@ function solutionFace(s){ //Простое решение в лоб
 }
 console.log(solutionFace(bosuya));
 
-function countBy(x, n) {
+function countBy(x, n) {//Задача - из заданных чисел x и n вывести такой массив что [x1,x+x,x+x+x,...,x+nx]
     let z = [];
     for (let i = 1; i <= n; i++){
       z.push(x * i);
@@ -386,3 +386,56 @@ console.log(countBy(1,10));
 /*
 const countBy = (x, n) => [...Array(n)].map((_, idx) => ++idx * x);//
 */
+
+
+
+/*
+Задача
+i = n
+где i - номер челика, n - количество дверей
+if (arr[i] == true) {
+    counter++
+} else {
+    counter--}
+*/
+
+function finalState(i) {//Изначально известно количество учащихся
+    if (n > 0 || n <= 100000 || typeof n === 'number') {
+    let n = i;//По условию количество дверей n равно количеству учащихся
+    let startArray = [];
+    for (i = 0; i < n; i++){
+        startArray.forEach(x => x = 0);
+    }
+        let currentArray = [];
+    let finalArray = [];
+    
+    
+    //Array.forEach(x => 0);
+    //startArray -> currentArray
+
+    //currentArray -> finalArray
+
+    return finalArray
+    } else {
+        return `Your input is incorrect for this`
+    }
+}
+//Функция для создания конечного массива
+
+
+
+function truue(finalArray) {// finalArray.reduce((a,b) => a + (b == 1 ? b : 0),0)); - зачем изобретать велосипед?
+    let counter = 0;//Впринципе можно))
+    finalArray.forEach(x => x == true ? counter++ : 0);
+    return counter//Это ответ
+}//Функция для конечного массива
+
+
+const arroi1 = [true,false,true];
+const arroi2 = [false,false,true];
+const arroi3 = [true,false,false];
+const arroi4 = [true,false,false,true,true,false];
+console.log(truue(arroi1));
+console.log(truue(arroi2));
+console.log(truue(arroi3));
+console.log(truue(arroi4));
